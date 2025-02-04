@@ -14,13 +14,9 @@ query = {"name": "John Doe"}
 document = collection.find_one(query)
 print(document)
 
-# Modification
+# Suppression
 query = {"name": "John Doe"}
 update = {"$set": {"age": 31}}
 result = collection.update_one(query, update)
 print("Modified document count:", result.modified_count)
 
-# suppression
-query = {"name": "John Doe"}
-result = collection.delete_one(query)
-print("Deleted document count:", result.deleted_count)
